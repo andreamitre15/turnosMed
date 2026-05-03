@@ -73,3 +73,24 @@ ul li {
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   font-size: 15px;
 }
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 1rem;
+    font-size: 25px;
+    color: blueviolet;
+    gap: 5rem;
+}
+
+footer a {
+    border: none;
+    outline: none;
+}
+
+.redes i {
+    color: hotpink;
+    border: none;
+    outline: none;
+    margin: 15px;
+}

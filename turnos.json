@@ -1,0 +1,5 @@
+[
+  { "nombre": "Juan Pérez", "especialidad": "Clínica", "fecha": "2026-05-05" },
+  { "nombre": "María Gómez", "especialidad": "Pediatría", "fecha": "2026-05-06" },
+  { "nombre": "Carlos López", "especialidad": "Cardiología", "fecha": "2026-05-07" }
+]

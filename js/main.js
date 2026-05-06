@@ -60,8 +60,7 @@ function mostrarTurnos() {
   });
 }
 
-
-// Manejo del formulario
+// 🔹 Manejo del formulario
 document.getElementById("formTurno").addEventListener("submit", e => {
   e.preventDefault();
 
@@ -73,7 +72,7 @@ document.getElementById("formTurno").addEventListener("submit", e => {
   turnos.push(nuevoTurno);
   mostrarTurnos();
 
-  // 🔹 Guardar en LocalStorage cada vez que se agrega un turno
+  // Guardar en LocalStorage cada vez que se agrega un turno
   localStorage.setItem("turnos", JSON.stringify(turnos));
 
   // Notificación con SweetAlert
@@ -89,3 +88,39 @@ document.getElementById("formTurno").addEventListener("submit", e => {
 
 // Inicializar
 cargarTurnos();
+
+
+// ===============================
+// 🔹 Especialidades dinámicas
+// ===============================
+
+// Array inicial de especialidades
+let especialidadesClinica = ["Cardiología", "Dermatología", "Pediatría", "Ginecología", "cualquiera"];
+
+// Función para cargar especialidades en el <select>
+function cargarEspecialidades() {
+  const select = document.getElementById("especialidad");
+  select.innerHTML = ""; // limpiar antes de volver a dibujar
+
+  especialidadesClinica.forEach(e => {
+    const option = document.createElement("option");
+    option.value = e;
+    option.textContent = e;
+    select.appendChild(option);
+  });
+}
+
+// Funciones para modificar dinámicamente
+function agregarEspecialidad(nueva) {
+  especialidadesClinica.push(nueva);
+  cargarEspecialidades();
+}
+
+function eliminarEspecialidad(nombre) {
+  especialidadesClinica = especialidadesClinica.filter(e => e !== nombre);
+  cargarEspecialidades();
+}
+
+// Llamar al inicio
+cargarEspecialidades();
+

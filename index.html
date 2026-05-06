@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Simulador de Turnos Médicos</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Simulador de Turnos Médicos</title>
+    <link rel="stylesheet" href="styles.css">
 
-  <!-- Librería externa: SweetAlert -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Librería externa: SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  <!-- Tu archivo JS con defer -->
-  <script src="./js/main.js" defer></script>
-  <link rel="stylesheet" href="./css/styles.css">
+    <!-- Tu archivo JS con defer -->
+    <script src="./js/main.js" defer></script>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
-  <h1>Reserva de Turnos Médicos</h1>
+    <h1>Reserva de Turnos Médicos</h1>
 
-  <form id="formTurno">
-    <label>Nombre del paciente:</label>
-    <input type="text" id="nombre" required>
 
-    <label>Especialidad:</label>
-    <select id="especialidad" required>
-      <option value="Clínica">Clínica</option>
-      <option value="Pediatría">Pediatría</option>
-      <option value="Cardiología">Cardiología</option>
-    </select>
 
-    <label>Fecha:</label>
-    <input type="date" id="fecha" required>
+    <form id="formTurno">
+        <label>Nombre del paciente:</label>
+        <input type="text" id="nombre" required>
 
-    <button type="submit">Reservar turno</button>
-  </form>
+        <label>Especialidad:</label>
+        <select id="especialidad" required>
+        </select>
 
-  <h2>Turnos reservados</h2>
-  <ul id="listaTurnos"></ul>
-  <footer>
+        <label>Fecha:</label>
+        <input type="date" id="fecha" required>
+
+        <button type="submit">Reservar turno</button>
+    </form>
+
+    <h2>Turnos reservados</h2>
+    <ul id="listaTurnos"></ul>
+    <footer>
         <div>
             <p><span class="fo">Todos los derechos reservados - Andrea Mitre </span></p>
         </div>
     </footer>
 </body>
+
 </html>
